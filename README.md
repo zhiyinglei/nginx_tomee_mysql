@@ -17,7 +17,7 @@
 
    http://localhost:10080/logs/
 
-   http://localhost:8080/rr/
+   http://localhost:10080/rr/
    
 9. mysql shell
    
