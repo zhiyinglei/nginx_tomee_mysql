@@ -5,14 +5,11 @@ dnginx:
     links:
         - tomee:tomee
     ports:
-        - "80:80"
         - "10080:10080"
 tomee:
     build: ./tomee
     links:
         - mysql
-    ports:
-        - "8080:8080"
 mysql:
     build: ./mysql
     environment:
