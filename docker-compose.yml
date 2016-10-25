@@ -1,0 +1,23 @@
+dnginx:
+    build: ./dnginx
+    volumes:
+        - ~/.reactor/logs:/usr/share/nginx/html/logs
+    links:
+        - tomee:tomee
+    ports:
+        - "80:80"
+        - "10080:10080"
+tomee:
+    build: ./tomee
+    links:
+        - mysql
+    ports:
+        - "8080:8080"
+mysql:
+    build: ./mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=my-secret-pw
+    volumes:
+        - /Users/skoal/mount_dockers/mysql:/var/lib/mysql
+    ports:
+        - "3306:3306"
