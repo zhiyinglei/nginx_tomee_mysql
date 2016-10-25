@@ -22,3 +22,9 @@
 9. mysql shell
    
    mysql -h HOST_IP -P 3306 -ureactor  -pp@ssword
+
+10. reset database
+    
+    rm -rf ~/mount_dockers/mysql/ && mkdir -p ~/mount_dockers/mysql
+    
+    docker-compose up --build
