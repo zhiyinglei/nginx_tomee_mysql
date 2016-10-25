@@ -28,3 +28,8 @@
     rm -rf ~/mount_dockers/mysql/ && mkdir -p ~/mount_dockers/mysql
     
     docker-compose up --build
+
+
+note: 
+   In Nginx Server, /usr/share/nginx/html/logs will be mounted to Host ~/.reactor/logs
+   In Mysql Server, /var/lib/mysql will be mounted to Host ~/mount_dockers/mysql
