@@ -5,7 +5,7 @@
 
 3. cd && mkdir -p .reactor/logs/ && mkdir -p mount_dockers/mysql
 
-4. echo "index in log" > .reactor/logs/index.html
+4. echo "index in log" > ~/.reactor/logs/index.html
 
 5. git clone https://github.com/zhiyinglei/nginx_tomee_mysql.git
 
