@@ -15,6 +15,6 @@ mysql:
     environment:
         - MYSQL_ROOT_PASSWORD=my-secret-pw
     volumes:
-        - /Users/skoal/mount_dockers/mysql:/var/lib/mysql
+        - ~/mount_dockers/mysql:/var/lib/mysql
     ports:
         - "3306:3306"
