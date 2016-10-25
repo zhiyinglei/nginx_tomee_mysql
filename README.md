@@ -14,8 +14,11 @@
 7. docker-compose up --build
 
 8. visit localhost with your browser
+
    http://localhost:10080/logs/
+
    http://localhost:8080/rr/
    
 9. mysql shell
+   
    mysql -h HOST_IP -P 3306 -ureactor  -pp@ssword
