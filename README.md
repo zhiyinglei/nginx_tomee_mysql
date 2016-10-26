@@ -1,3 +1,10 @@
+# Docker compose for nginx, tomee, and mysql
+
+# OS: 
+  
+  OS X and Ubuntu 
+
+# Installation 
 
 1. install docker
 
@@ -31,7 +38,7 @@
 
 
 
-note: 
+# note: 
 
    In Nginx Server, /usr/share/nginx/html/logs will be mounted to Host ~/.reactor/logs
    
