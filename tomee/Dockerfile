@@ -11,6 +11,7 @@ RUN apt-get update \
 			software-properties-common \
 			curl \
 			vim \
+                        wget \
  	&& add-apt-repository ppa:webupd8team/java \   
 	&& echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections \  
 	&& echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections \
@@ -49,10 +50,9 @@ RUN set -x \
 	&& rm -Rf apache-tomee-webprofile-7.0.1 \
 	&& rm bin/*.bat \
 	&& rm tomee.tar.gz* \
-	&& rm -rf /var/lib/apt/lists/* \
-        && mkdir -p /usr/local/tomee/webapps/ROOT/rr
-
-ADD index.html /usr/local/tomee/webapps/ROOT/rr/
+	&& rm -rf /var/lib/apt/lists/* \ 
+        && wget "https://oss.sonatype.org/content/repositories/releases/com/tascape/reactor-report/1.2.3/reactor-report-1.2.3.war" \ 
+                     -O /usr/local/tomee/webapps/rr.war 
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
