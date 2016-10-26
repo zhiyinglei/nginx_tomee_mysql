@@ -50,9 +50,13 @@ RUN set -x \
 	&& rm -Rf apache-tomee-webprofile-7.0.1 \
 	&& rm bin/*.bat \
 	&& rm tomee.tar.gz* \
-	&& rm -rf /var/lib/apt/lists/* \ 
+	&& rm -rf /var/lib/apt/lists/* \
+        && mkdir -p /usr/local/tomee/webapps/rr \
         && wget "https://oss.sonatype.org/content/repositories/releases/com/tascape/reactor-report/1.2.3/reactor-report-1.2.3.war" \ 
-                     -O /usr/local/tomee/webapps/rr.war 
+                     -O /usr/local/tomee/webapps/rr/rr.war \
+        && cd /usr/local/tomee/webapps/rr && jar xvf rr.war && rm rr.war \
+        && sed -i 's/127.0.0.1/mysql/g' /usr/local/tomee/webapps/rr/META-INF/context.xml 
+   
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
