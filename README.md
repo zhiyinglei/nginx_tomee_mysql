@@ -36,7 +36,11 @@
     
     docker-compose up --build
 
+11. exit
 
+    ctrl-c  or 
+    
+    docker rm $(docker ps -aq) -f  # in another terminal window
 
 # note: 
 
