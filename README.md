@@ -22,9 +22,9 @@
 
 8. visit localhost with your browser
 
-   http://localhost:10080/logs/
+   https://localhost:10080/logs/
 
-   http://localhost:10080/rr/
+   https://localhost:10080/rr/
    
 9. mysql shell
    
