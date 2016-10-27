@@ -18,7 +18,7 @@
 
 6. cd nginx_tomee_mysql
 
-7. docker-compose up --build
+7. docker-compose up --build -d
 
 8. visit localhost with your browser
 
@@ -40,9 +40,7 @@
     
     docker-compose up --build
 
-11. exit
-
-    ctrl-c  or 
+11. stop services
     
     docker rm $(docker ps -aq) -f  # in another terminal window
 
