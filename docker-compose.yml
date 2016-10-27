@@ -6,6 +6,7 @@ dnginx:
         - tomee:tomee
     ports:
         - "10080:10080"
+        - "10443:10443"
 tomee:
     build: ./tomee
     links:
