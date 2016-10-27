@@ -22,10 +22,14 @@
 
 8. visit localhost with your browser
 
-   https://localhost:10080/logs/
+   https://localhost:10443/logs/
 
-   https://localhost:10080/rr/
+   https://localhost:10443/rr/
    
+   http://localhost:10080/logs/
+
+   http://localhost:10080/logs/
+
 9. mysql shell
    
    mysql -h HOST_IP -P 3306 -ureactor  -pp@ssword
